@@ -34,8 +34,7 @@ pipeline {
 
                 echo "Deploying static site to EC2..."
  
-                scp -i $SSH_KEY -o StrictHostKeyChecking=no -r startbootstrap-agency-gh-pages/startbootstrap-agency-gh-pages
-/startbootstrap-agency-gh-pages/* $EC2_USER@$EC2_HOST:$REMOTE_DIR
+                scp -i $SSH_KEY -o StrictHostKeyChecking=no -r startbootstrap-agency-gh-pages/startbootstrap-agency-gh-pages/startbootstrap-agency-gh-pages/* $EC2_USER@$EC2_HOST:$REMOTE_DIR
  
                 echo "Deployment complete!"
 
